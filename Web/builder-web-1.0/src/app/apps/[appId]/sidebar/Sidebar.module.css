@@ -1,0 +1,149 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 200px;
+    height: 100vh;
+    border-right: 1px solid var(--border-normal);
+    user-select: none;
+    background-color: var(--background-normal);
+    z-index: 2;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    padding: 10px;
+}
+
+.header p {
+    font-size: 0.9rem;
+}
+
+.menuList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    padding: 20px 5px 10px 25px;
+    gap: 10px;
+}
+
+.menuItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.menuItem:hover {
+    background-color: var(--background-alt);
+    opacity: 0.8;
+    padding-left: 20px;
+}
+
+.menuItem:hover p {
+    color: var(--color-normal);
+}
+
+.menuItem.active {
+    background-color: var(--background-alt);
+}
+
+.menuItem.active p {
+    color: var(--color-normal);
+}
+
+.menuItem.active p::before {
+    content: "·";
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.menuItem p {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--color-placeholder);
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.footerMenuList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    gap: 10px;
+}
+
+.footerMenuItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    width: 90%;
+    cursor: pointer;
+    border: 1px solid var(--border-normal);
+    box-shadow: var(--shadow-normal);
+    transition: box-shadow 0.3s;
+}
+
+.footerMenuItem p {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--color-normal);
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .menuList {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 60px;
+        padding: 0 10px;
+        gap: 10px;
+    }
+
+    .menuItem {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 10px 10px;
+    }
+
+    .footer {
+        display: none;
+    }
+}

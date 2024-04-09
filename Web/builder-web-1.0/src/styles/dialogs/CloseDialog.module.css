@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    padding: 20px 30px;
+    font-weight: 400;
+    box-shadow: 2px 2px 4px 0px rgba(217, 217, 217, 0.25);
+}
+
+.buttonWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.buttonLeft {
+    display: flex;
+    width: 48%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 1px solid var(--primary);
+    padding: 10px 20px;
+}
+
+.buttonRight {
+    display: flex;
+    width: 48%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+}

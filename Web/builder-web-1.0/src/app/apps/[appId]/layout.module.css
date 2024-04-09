@@ -1,0 +1,39 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-normal);
+    overflow: hidden;
+}
+
+.body {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: var(--background-alt);
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        flex-direction: column-reverse;
+    }
+
+    .body {
+        height: calc(100vh - 50px);
+    }
+
+    .sidebar {
+        flex-direction: row;
+        width: 100%;
+        height: 60px;
+    }
+}

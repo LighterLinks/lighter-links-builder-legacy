@@ -1,0 +1,33 @@
+services:
+  builder-neo4j:
+    image: neo4j:5.15.0
+    environment:
+      NEO4J_AUTH: ${NEO4J_AUTH}
+    networks:
+      - builder-network
+    ports:
+      - ${NEO4J_PORT_BINDING}
+      - ${NEO4J_BOLT_PORT_BINDING}
+    volumes:
+      - builder-neo4j-vol:/data
+      - builder-neo4j-logs-vol:/logs
+
+  builder-web:
+    build:
+      context: ${WEB_CONTEXT_PATH}
+      dockerfile: Dockerfile
+      network: host
+    ports:
+      - ${WEB_PORT_BINDING}
+    volumes:
+      - ./Web:/app/host
+
+networks:
+  builder-network:
+    external: true
+
+volumes:
+  builder-neo4j-vol:
+    external: true
+  builder-neo4j-logs-vol:
+    external: true

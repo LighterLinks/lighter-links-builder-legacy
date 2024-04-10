@@ -2,17 +2,14 @@
 
 import Image from "next/image";
 import styles from "./TopBar.module.css";
-import { Suspense, use, useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { logout, profile } from "@/service/auth/auth-api";
 import { getUser } from "@/service/user/api";
 import { User } from "@/service/user/interface";
-import SettingsIcon from "@/asset/Icons/SettingsIcon";
 import { useRouter } from "next/navigation";
 import LocalStorage from "@/lib/localstroage";
-import Skeleton from "react-loading-skeleton";
 import logoWithText from "@/asset/images/logo_text.png";
 import "react-loading-skeleton/dist/skeleton.css";
-import ProfileIcon from "@/asset/Icons/ProfileIcon";
 
 export default function TopBar() {
   const [user, setUser] = useState<User | null>(null);
@@ -52,15 +49,8 @@ export default function TopBar() {
           }}
         />
       </div>
-      <div className={styles.userSection} onClick={handleSignOut}>
-        {user ? (
-          <>
-            <p>{user?.name}</p>
-            <ProfileIcon size={15} color="#000" />
-          </>
-        ) : (
-          <Skeleton containerClassName="flex-1" width={80} />
-        )}
+      <div className={styles.userCircle} onClick={handleSignOut}>
+        <p>{user?.name?.charAt(0)}</p>
       </div>
     </div>
   );

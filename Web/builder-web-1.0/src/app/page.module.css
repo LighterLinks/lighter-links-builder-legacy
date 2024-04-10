@@ -25,7 +25,6 @@
   align-items: center;
   justify-content: center;
   gap: 1.25em;
-  padding: 1.25em;
 }
 
 .text {
@@ -38,7 +37,7 @@
 
 .title {
   color: var(--color-normal);
-  font-size: 2.5em;
+  font-size: 4rem;
   font-style: normal;
   font-weight: 600;
   line-height: 100%;
@@ -46,7 +45,7 @@
 
 .subtitle {
   color: var(--color-normal);
-  font-size: 1.25em;
+  font-size: 2.5em;
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
@@ -57,7 +56,6 @@
   justify-content: center;
   align-items: center;
   padding: 10px 30px;
-  cursor: pointer;
   outline: none;
   border: none;
   color: var(--color-normal);
@@ -77,6 +75,7 @@
   border: 1px solid var(--color-normal);
 }
 
+
 .primaryButton:hover p {
   color: var(--color-normal);
 }
@@ -86,20 +85,16 @@
   color: inherit;
 }
 
-@media screen and (min-width: 48em) {
+@media screen and (max-width: 768px) {
   .header {
     flex-direction: row;
   }
 
   .title {
-    font-size: 4em;
+    font-size: 2rem;
   }
 
   .subtitle {
-    font-size: 2em;
-  }
-
-  .primaryButton {
-    font-size: 1em;
+    font-size: 1.5rem;
   }
 }

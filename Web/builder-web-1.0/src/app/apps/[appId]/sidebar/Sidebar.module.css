@@ -42,7 +42,6 @@
     justify-content: flex-start;
     width: 100%;
     padding: 10px 10px;
-    cursor: pointer;
     transition: all 0.3s;
 }
 
@@ -102,8 +101,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 5px 10px;
-    width: 90%;
-    cursor: pointer;
+    gap: 10px;
     border: 1px solid var(--border-normal);
     box-shadow: var(--shadow-normal);
     transition: box-shadow 0.3s;

@@ -2,6 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  cursor: var(--builder-cursor-normal) !important;
 }
 
 html,
@@ -15,12 +16,16 @@ body {
 }
 
 :root {
-  --primary: #34385F;
+  --builder-cursor-normal: url('../asset/cursor/builder_cursor.svg'), auto;
+  --builder-cursor-locate: url('../asset/cursor/builder_cursor_locate.svg'), auto;
+
+  --primary: #353535;
   --gray: #98A2B3;
   --gray-light: rgba(52, 64, 84, 0.73);
   --textfield: rgba(208, 213, 221, 0.15);
 
   --border-normal: rgba(0, 0, 0, 0.10);
+  --border-highlight: #24272F;
 
   --color-normal: #000000;
   --color-gray: #98A2B3;

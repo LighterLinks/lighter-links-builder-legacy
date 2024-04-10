@@ -13,6 +13,7 @@ import logoOutline from "@/asset/images/logo_outline.png";
 import logoAlt from "@/asset/images/logo_alt.png";
 import Image from "next/image";
 import PlusIcon from "@/asset/Icons/PlusIcon";
+import applicationLogo from "@/asset/images/application_logo.png";
 import MyAppScreenAlt from "./myapplication/MyAppScreenAlt";
 
 export default function DashboardHome() {
@@ -54,7 +55,8 @@ export default function DashboardHome() {
       <div className={styles.tabWrapper}>
         <div className={styles.adderButton} onClick={openCreateModal}>
           <p>New Application</p>
-          <PlusIcon size={16} color="#000" />
+          <Image src={applicationLogo} alt="logo" />
+          {/* <PlusIcon size={16} color="#000" /> */}
         </div>
         <div className={styles.tabs}>
           {DashboardTabs.map((tab, index) => (

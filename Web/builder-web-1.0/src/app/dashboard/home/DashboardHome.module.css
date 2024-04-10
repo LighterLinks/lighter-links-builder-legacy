@@ -48,7 +48,6 @@
     height: 100%;
     background-color: var(--background-alt);
     box-shadow: var(--shadow-normal);
-    cursor: pointer;
     transition: opacity 0.3s;
 }
 
@@ -82,12 +81,23 @@
     gap: 10px;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 10px;
+    padding: 5px 15px;
     background-color: var(--background-normal);
     box-shadow: var(--shadow-normal);
-    cursor: pointer;
     transition: background-color 0.3s;
     font-size: 0.8rem;
+    transition: outline 0.3s;
+}
+
+.adderButton:hover {
+    border: none;
+    outline: 0.5px solid var(--border-highlight);
+}
+
+.adderButton p {
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: var(--color-normal);
 }
 
 .tabs {
@@ -109,7 +119,7 @@
     height: 100%;
     background-color: #E8E8E8;
     padding: 0 30px;
-    cursor: pointer;
+
     transition: background-color 0.3s;
 }
 

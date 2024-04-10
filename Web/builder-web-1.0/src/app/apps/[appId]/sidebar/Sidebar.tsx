@@ -42,8 +42,8 @@ export default function Sidebar({
               className={styles.footerMenuItem}
               onClick={() => router.push(menu.route)}
             >
-              <p>{menu.name}</p>
               {menu.icon}
+              <p>{menu.name}</p>
             </motion.div>
           ))}
         </div>

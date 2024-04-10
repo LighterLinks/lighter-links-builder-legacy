@@ -10,7 +10,6 @@
     /* color: var(--color-contrast); */
     color: var(--color-normal);
     user-select: none;
-    cursor: pointer;
     outline: 1px solid var(--border-normal);
     box-sizing: border-box;
     transition: outline 0.3s;
@@ -18,7 +17,7 @@
 
 .container:hover {
     border: none;
-    outline: 2px solid var(--color-success);
+    outline: 2px solid var(--border-highlight);
     transition: outline 0.3s;
 }
 

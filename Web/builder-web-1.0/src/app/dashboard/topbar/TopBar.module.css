@@ -24,21 +24,23 @@
     color: var(--color-normal);
 }
 
-.userSection {
+.userCircle {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
-    gap: 10px;
-    padding: 5px 15px;
     align-items: center;
-    border: 1px solid var(--border-normal);
-    box-shadow: var(--shadow-normal);
-    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    transition: outline 0.3s;
 }
 
-.userSection p {
+.userCircle p {
     font-size: 0.8rem;
     font-weight: 400;
-    color: var(--color-normal);
+    color: var(--color-contrast);
+}
+
+.userCircle:hover {
+    outline: 2px solid var(--border-normal);
 }

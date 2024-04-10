@@ -1,4 +1,4 @@
-![Logo](https://api-storage.lighterlinks.io/builder/1712695564305-logo_text_bg.png)
+![Logo](https://api-storage.lighterlinks.io/builder/1712743852693-logo_text_bg.png)
 
 ## Get Started
 
